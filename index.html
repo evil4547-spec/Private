@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Secret ❤️</title>
+<style>
+body {
+  text-align:center;
+  font-family:Arial;
+  margin-top:100px;
+  background:#0f172a;
+  color:white;
+}
+input,button {
+  padding:12px;
+  margin:6px;
+  border-radius:10px;
+  border:none;
+}
+button {
+  background:#ec4899;
+  color:white;
+}
+</style>
+</head>
+
+<body>
+
+<h2>🔐 Secret Page</h2>
+
+<input id="user" placeholder="Username"><br>
+<input id="pass" type="password" placeholder="Password"><br><br>
+
+<button onclick="login()">Enter</button>
+
+<p id="msg"></p>
+
+<script>
+function login() {
+let u = document.getElementById("user").value;
+let p = document.getElementById("pass").value;
+
+if(u === "Nada" && p === "12345") {
+document.body.innerHTML = `
+<h1>بصراحة...</h1>
+<p>أنا لسه معجب بيكي ولسه حاسس مشاعر من ناحيتك ولسه عايزك و مش مشاعر واهميه والله انتي اي الكلان ❤️</p>
+<p>وحابب نبقى أقرب</p>
+`;
+} else {
+document.getElementById("msg").innerText = "حاولي تاني 😏";
+}
+}
+</script>
+
+</body>
+</html>
